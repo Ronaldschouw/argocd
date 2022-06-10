@@ -14,7 +14,7 @@ spec:
     namespace: test
 
   syncPolicy:
-    syncOpions:
+    syncOptions:
     - CreateNamespace=true
 
     automated:
