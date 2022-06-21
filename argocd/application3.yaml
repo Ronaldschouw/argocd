@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-app3
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Ronaldschouw/argocd.git
+    targetRevision: HEAD
+    path: my-apps/app-3
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: nginx3
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
+    automated:
+      selfHeal: true
+      prune: true
