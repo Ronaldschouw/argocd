@@ -10746,7 +10746,7 @@ metadata:
     nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
 spec:
   rules:
-  - host: ronald.westeurope.cloudapp.azure.com
+  - host: worker1-ronalt.westeurope.cloudapp.azure.com
     http:
       paths:
       - backend:
@@ -10758,5 +10758,5 @@ spec:
         pathType: Prefix
   tls:
   - hosts:
-    - ronald.westeurope.cloudapp.azure.com
+    - worker1-ronalt.westeurope.cloudapp.azure.com
     secretName: argocd-secret
