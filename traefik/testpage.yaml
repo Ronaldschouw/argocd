@@ -2,16 +2,16 @@
 kind: Namespace
 apiVersion: v1
 metadata:
-  name: traefik-test
+  name: traefik-probeer
   labels:
-    name: traefik-test
+    name: traefik-probeer
 
 ---
 kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: nginx-app
-  namespace: traefik-test
+  namespace: traefik-probeer
   labels:
     app: nginx-app
 spec:
@@ -33,7 +33,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-app
-  namespace: traefik-test
+  namespace: traefik-probeer
 spec:
   selector:
     app: nginx-app
@@ -47,7 +47,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: traefik-ingress
-  namespace: traefik-test
+  namespace: traefik-probeer
   annotations:
     kubernetes.io/ingress.class: traefik
 spec:
