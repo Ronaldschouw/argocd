@@ -10,7 +10,7 @@ metadata:
 apiVersion: v1
 data:
   index.html: |
-    Hallo, werld!
+    Hallo, wereld!
 kind: ConfigMap
 metadata:
   name: index.html
