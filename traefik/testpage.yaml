@@ -61,5 +61,3 @@ spec:
           items:
           - key: index.html
             path: index.html
-
-kubectl apply -n argocd -f https://raw.githubusercontent.com/Ronaldschouw/argocd/main/traefik/testpage.yaml
